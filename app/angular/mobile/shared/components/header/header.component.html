@@ -1,0 +1,25 @@
+<md-menu #menu="mdMenu">
+  <button md-menu-item disabled>
+    <indicator-component [connected]="true"></indicator-component>
+    <span>Connected</span>
+  </button>
+  <button md-menu-item disabled>
+    <indicator-component [connected]="false"></indicator-component>
+    <span>Connecting</span>
+  </button>
+  <button md-menu-item disabled>
+    <span>Tap to click</span>
+  </button>
+</md-menu>
+
+<md-toolbar color="primary">
+  <button type="button" md-icon-button [mdMenuTriggerFor]="menu">
+    <md-icon>help</md-icon>
+  </button>
+
+  <div>Mobile Mouse</div>
+
+  <div class="indicator__container">
+    <indicator-component [connected]="websocket.connected"></indicator-component>
+  </div>
+</md-toolbar>

@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "name": "mobile-mouse",
+  "description": "Controlling computer mouse with phone",
+  "homepage": "https://github.com/GuskiS/mobile-mouse",
+  "license": "MIT",
+  "scripts": {
+    "release:linux": "yarn run build:angular && yarn run build:electron && yarn run release:build",
+    "release:win": "yarn run build:angular && yarn run build:electron",
+    "release:build": "cd app/electron && build --publish onTagOrDraft",
+    "prebuild": "yarn install",
+    "build": "yarn run build:angular && yarn run build:electron",
+    "build:angular": "cd app/angular && yarn run build:prod",
+    "build:electron": "cd app/electron && yarn run build:prod",
+    "electron": "yarn install && cd app/electron && yarn run build:dev",
+    "outdated": "cd app/angular && yarn run outdated && cd ../electron && yarn run outdated",
+    "postinstall": "cd app/angular && yarn install && cd ../electron && yarn install"
+  },
+  "author": {
+    "name": "Edvards Lazdāns",
+    "email": "edvards@lazdans.lv",
+    "url": "https://github.com/GuskiS"
+  }
+}

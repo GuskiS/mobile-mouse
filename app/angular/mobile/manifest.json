@@ -1,0 +1,21 @@
+{
+  "name": "Mobile Mouse",
+  "short_name": "Mobile Mouse",
+  "start_url": "/",
+  "theme_color": "#303030",
+  "background_color": "#303030",
+  "orientation": "portrait",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<md-toolbar color="primary">
+  <div class="bar__title">{{ electron.settings.app.title }}</div>
+
+  <div class="bar__icons">
+    <button md-icon-button name="button" (click)="click('hide')">
+      <md-icon>remove</md-icon>
+    </button>
+
+    <button md-icon-button name="button" (click)="click('exit')">
+      <md-icon>clear</md-icon>
+    </button>
+  </div>
+</md-toolbar>

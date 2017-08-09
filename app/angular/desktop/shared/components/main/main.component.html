@@ -1,0 +1,10 @@
+<form #form="ngForm" (ngSubmit)="submit(form.value)">
+  <md-input-container *ngFor="let input of inputs">
+    <input mdInput [id]="input.key" [name]="input.key" [type]="input.type" [placeholder]="input.placeholder" [(ngModel)]="electron.settings.user[input.key]" />
+  </md-input-container>
+
+  <div class="form__buttons">
+    <button md-raised-button type="submit" name="button">Save</button>
+    <button md-raised-button type="button" name="button" (click)="click()">Default</button>
+  </div>
+</form>

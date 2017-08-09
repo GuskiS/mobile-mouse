@@ -1,0 +1,26 @@
+<md-toolbar color="secondary">
+  <form #form="ngForm" (ngSubmit)="send($event, form)">
+    <div class="input__container" *ngIf="input">
+      <button md-icon-button type="button" color="warn" (click)="text($event)">
+        <md-icon>delete</md-icon>
+      </button>
+
+      <md-input-container>
+        <input mdInput [(ngModel)]="form.text" name="text" type="text" placeholder="Text" autocomplete="off">
+      </md-input-container>
+
+      <button md-icon-button type="submit" color="primary">
+        <md-icon>mail_outline</md-icon>
+      </button>
+    </div>
+  </form>
+
+  <div class="button__container" *ngIf="!input">
+    <md-select (change)="change()" [(ngModel)]="button">
+      <md-option *ngFor="let mb of buttons" [value]="mb">{{ mb | uppercase }}</md-option>
+    </md-select>
+
+    <button md-button type="button" (click)="text($event)">TEXT</button>
+    <button md-button type="button" (click)="hold()">HOLD</button>
+  </div>
+</md-toolbar>

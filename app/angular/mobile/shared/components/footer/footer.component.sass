@@ -1,0 +1,34 @@
+\:host::ng-deep
+  border-top: 1px solid #424242
+  .mat-toolbar
+    padding: 0
+    .input__container,
+    .button__container
+      height: 100%
+      width: 100vmin
+      display: flex
+      align-items: center
+    .input__container
+      justify-content: space-between
+      .mat-input-container
+        width: 100%
+      .mat-focused .mat-input-placeholder,
+      .mat-input-placeholder:not(.mat-empty)
+        top: 1em
+      .mat-input-infix
+        border: 0
+      .mat-input-subscript-wrapper
+        display: none
+      .mat-input-wrapper
+        padding-bottom: 0
+      .mat-input-underline
+        bottom: 5px
+    .button__container
+      justify-content: center
+      button
+        width: 100%
+        height: 100%
+        border-radius: 0
+      .mat-select
+        min-width: 130px
+        padding-left: 10px

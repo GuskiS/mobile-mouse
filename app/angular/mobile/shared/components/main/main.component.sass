@@ -1,0 +1,14 @@
+\:host::ng-deep
+  flex: 1
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .joystick
+    flex: 1
+    height: 100vmin
+    max-height: 100%
+    position: relative
+    &.pulsate .front
+      animation: pulsate 1.35s ease-out
+      animation-iteration-count: infinite

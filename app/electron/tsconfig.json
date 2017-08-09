@@ -1,0 +1,21 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./app",
+    "rootDir": "./src",
+    "sourceMap": false,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "target": "es5",
+    "types": ["node", "express", "ws"],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2015", "es7"]
+  },
+  "exclude": ["index.ts", "node_modules"]
+}
