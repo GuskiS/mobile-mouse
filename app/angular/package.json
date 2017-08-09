@@ -9,6 +9,7 @@
     "outdated": "YARN_SILENT=0 yarn outdated || true",
     "build:dev": "concurrently 'yarn run mobile:dev' 'yarn run desktop:dev'",
     "build:prod": "concurrently 'yarn run mobile:prod' 'yarn run desktop:prod' 'yarn run server:prod'",
+    "release:prod": "yarn run mobile:prod && yarn run desktop:prod && yarn run server:prod",
     "postbuild:prod": "node server.js",
     "mobile": "ng build --app mobile",
     "mobile:dev": "yarn run mobile -- --watch",

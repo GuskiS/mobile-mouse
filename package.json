@@ -5,9 +5,10 @@
   "homepage": "https://github.com/GuskiS/mobile-mouse",
   "license": "MIT",
   "scripts": {
-    "release:linux": "yarn run build:angular && yarn run build:electron && yarn run release:build",
-    "release:win": "yarn run build:angular && yarn run build:electron",
+    "release:linux": "yarn run release:angular && yarn run build:electron && yarn run release:build",
+    "release:win": "yarn run release:angular && yarn run build:electron",
     "release:build": "cd app/electron && build --publish onTagOrDraft",
+    "release:angular": "cd app/angular && yarn run release:prod",
     "prebuild": "yarn install",
     "build": "yarn run build:angular && yarn run build:electron",
     "build:angular": "cd app/angular && yarn run build:prod",
