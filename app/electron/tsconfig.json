@@ -13,7 +13,7 @@
     "skipLibCheck": true,
     "module": "commonjs",
     "target": "es5",
-    "types": ["node", "express", "ws"],
+    "types": ["node", "express", "ws", "ip"],
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2015", "es7"]
   },

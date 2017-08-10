@@ -23,6 +23,7 @@ interface AppInterface {
   blurred: boolean
   previous: { x?: number; y?: number; hidden?: boolean }
   button: "left" | "middle" | "right"
+  ip: string
 }
 
 interface UserInterface {

@@ -1,4 +1,5 @@
 import * as is from "electron-is"
+import * as ip from "ip"
 import { BrowserWindow, Menu } from "electron"
 
 import * as tray from "./tray"
@@ -31,6 +32,7 @@ export const create = () => {
   instances.launcher = launcher.init()
   server.listen()
   settings.app.set("button", "left")
+  settings.app.set("ip", ip.address())
 
   window.loadURL(index())
   window.setMenu(new Menu())

@@ -9,7 +9,8 @@ const DEFAULT: SettingsInterface = {
     launch: false,
     blurred: false,
     previous: {},
-    button: "left"
+    button: "left",
+    ip: ""
   },
   user: {
     port: 7777,

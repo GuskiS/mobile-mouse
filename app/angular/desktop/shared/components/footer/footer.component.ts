@@ -7,8 +7,10 @@ import { ElectronService } from "./../../services"
   templateUrl: "./footer.component.html"
 })
 export class FooterComponent {
-  url = "http://localhost"
-  constructor(public electron: ElectronService) {}
+  url: string
+  constructor(public electron: ElectronService) {
+    this.url = `http://${this.electron.settings.app.ip}`
+  }
 
   link() {
     this.electron.shell.openExternal(`${this.url}:${this.electron.settings.user.port}`)
